@@ -18,7 +18,7 @@ export default function ServiceAdd(props) {
 
   return (
     <form onSubmit={handleSubmit}>
-      {error && <div>Произошла ошибка!</div>}
+      {error && <div className="error-msg">Произошла ошибка!</div>}
       <input name='name' onChange={handleChange} value={item.name} />
       <input name='price' onChange={handleChange} value={item.price} />
       {!loading && <button type='submit' disabled={loading}>Save</button>}

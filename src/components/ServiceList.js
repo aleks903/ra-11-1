@@ -32,7 +32,7 @@ export default function ServiceList(props) {
   if (error) {
     return (
       <React.Fragment>
-        <div>Произошла ошибка!</div>
+        <div className="error-msg">Произошла ошибка!</div>
         <div onClick={handleRefresh}>Refresh</div>
       </React.Fragment>
     );

@@ -52,7 +52,7 @@ export default function ServiceChange(props) {
   if (error) {
     return (
       <div>
-        <div>Произошла ошибка!</div>
+        <div className="error-msg">Произошла ошибка!</div>
         <div onClick={handleBack}>Назад</div>
       </div>
     );
@@ -60,18 +60,17 @@ export default function ServiceChange(props) {
 
   return (
     <React.Fragment>
-      <form onSubmit={handleSubmit} disabled={chLoading}>
-        <label>Название
-          <input name='name' onChange={handleChange} value={item.name} />
-        </label>
-        <label>Стоимость
-          <input name='price' onChange={handleChange} value={item.price} />
-        </label>
-        <label>Описание
-          <input name='content' onChange={handleChange} value={item.content} />
-        </label>
-        <button type='button'onClick={handleCancel}>Отмена</button>
-        {!chLoading && <button type='submit'>Сохранить</button>}
+      <form onSubmit={handleSubmit} disabled={chLoading} className="change-form">
+        <label>Название</label>
+        <input name='name' onChange={handleChange} value={item.name} />
+        <label>Стоимость</label>
+        <input name='price' onChange={handleChange} value={item.price} />
+        <label>Описание</label>
+        <input name='content' onChange={handleChange} value={item.content} />
+        <div className="buttons">
+          <button type='button'onClick={handleCancel}>Отмена</button>
+          {!chLoading && <button type='submit'>Сохранить</button>}
+        </div>
       </form>
       {chLoading && <div className='loading'></div>}
       {chError && <p>{chError.message}</p>}

@@ -4,72 +4,46 @@
   box-sizing: content-box;
 }
 
-body {
-  background-color: #e8eaed;
+ul {
+  list-style: none;
+  padding: 0;
 }
 
-a {
-  text-decoration: none;
-  color: #000000;
-}
-
-p {
-  margin: 10px 0;
-  font-size: 2em;
-}
-
-.main-top {
-  margin: 5px;
-  padding: 10px;
-  background-color: #ffffff;
-  text-align: right;
-}
-
-.button {
-  border: 1px solid;
-  padding: 5px;
-  background-color: #4469ae;
-  color: #ffffff;
-}
-
-.remove {
-  background-color: #ff0000;
-}
-
-.item-post, .new-post, .change-post {
-  margin: 5px;
-  background-color: #ffffff;
-  padding: 10px;
-}
-
-.item-post-header {
+li {
   display: flex;
   align-items: center;
+  width: 300px;
+  padding: 5px;
+  border: 1px solid #dedede;
 }
 
-.item-post-img {
-  width: 50px;
-  height: 50px;
-  background-color: #d4d4d4;
-  border-radius: 50px;
-  margin-right: 10px;
+li button:first-child {
+  margin-left: auto;
+  margin-right: 5px;
 }
 
-.item-post-name {
+button {
+  background-color: #ff5252;
+  color: white;
+}
+
+button:disabled {
+  background-color: #dedede;
+}
+
+.error-msg {
+  width: 250px;
+  padding: 15px 0;
+  text-align: center;
+  background-color: #fbb7b7;
+  color: #6f0000;
+  font-weight: bold;
+}
+
+.change-form {
   display: flex;
   flex-direction: column;
-}
-
-.top, .submit, .item-post-footer {
-  text-align: right;
-}
-
-.top span {
-  cursor: pointer;
-}
-
-.new-post textarea, .change-post textarea {
-  width: 100%;
+  width: 300px;
 }
 
 .loading {
