@@ -4,7 +4,7 @@ import { removeService, fetchService } from '../actions/actionCreators.js';
 import ServiceAdd from './ServiceAdd.js';
 
 export default function ServiceList(props) {
-  const { history} = props;
+  const { match, history} = props;
   const { items, loading, error } = useSelector((state) => state.serviceList);
   const { isLoading, isError } = useSelector((state) => state.serviceIsLoadng);
   const dispatch = useDispatch();
@@ -37,6 +37,8 @@ export default function ServiceList(props) {
       </React.Fragment>
     );
   }
+
+console.log(match.url)
 
   return (
     <React.Fragment>
