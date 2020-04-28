@@ -11,14 +11,9 @@ import ServiceChange from './components/ServiceChange.js';
 export default function App(props) {
   // const urlEnv = process.env.REACT_APP_LOCAL_URL;
   const url = window.location.pathname;
-console.log(window.location.pathname);
-console.log(window.location);
   return (
     <React.Fragment>
       <Router>
-        {/* <ServiceAdd /> */}
-        {/* <Route path="/" component={ServiceChange} /> */}
-        <Link to={`${url}services`}>Serv</Link>
         <Switch>
           <Route path={`${url}services/:id`} component={ServiceChange} />
           <Route path={`${url}services`} component={ServiceList} />

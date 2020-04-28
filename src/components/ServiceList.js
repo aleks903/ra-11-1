@@ -18,7 +18,7 @@ export default function ServiceList(props) {
   };
 
   const handleChange = (id) => {
-    history.push(`/services/${id}`);
+    history.push(`${match.url}/${id}`);
   };
 
   const handleRefresh = () => {
